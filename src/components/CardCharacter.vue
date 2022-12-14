@@ -24,9 +24,9 @@ export default {
 @use "../styles/partials/variables" as*;
 
 .card {
-    width: calc(100% / 5 - 40px);
+    width: calc(100% / 5 - 30px);
     background-color: $bg-dark-blue;
-    margin: 10px 20px;
+    margin: 10px 15px;
     padding: 10px 10px 40px;
 
     h3 {

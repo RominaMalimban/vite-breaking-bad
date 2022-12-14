@@ -46,6 +46,5 @@ export default {
 
 body {
   background-color: $bg-dark-blue;
-
 }
 </style>

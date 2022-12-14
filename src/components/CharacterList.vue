@@ -19,6 +19,7 @@ export default {
     <section>
         <div class="container">
 
+            <!-- tasto select -->
             <select name="category" id="category">
                 <option value="choice">Select Category</option>
                 <option value="cat1">Category 1</option>
@@ -26,6 +27,7 @@ export default {
             </select>
 
             <div class="wrapper">
+                <!-- div risultati -->
                 <div class="result">
                     Find 62 characters
                 </div>
@@ -69,7 +71,7 @@ section {
             .cards {
                 display: flex;
                 flex-wrap: wrap;
-                margin: 20px -20px;
+                margin: 20px -15px;
                 text-align: center;
             }
         }
