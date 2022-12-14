@@ -17,6 +17,7 @@ export default {
 @use "../styles/partials/variables" as*;
 
 header {
+    padding: 10px;
 
     h1 {
         color: $white;
