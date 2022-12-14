@@ -17,5 +17,5 @@ export default {
 
 <style lang="scss">
 @use './styles/generals.scss';
-@use './styles/partials/variables.scss';
+@use './styles/partials/variables';
 </style>
