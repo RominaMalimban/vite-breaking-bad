@@ -1,6 +1,6 @@
 <script>
-
 import { store } from '../store.js';
+import CardCharacter from './CardCharacter.vue';
 
 export default {
     name: "CharacterList",
@@ -29,13 +29,10 @@ export default {
 
                 <!-- contenitore padre che contiene singola card -->
                 <div class="cards">
+
                     <!-- card -->
-                    <div class="card">
-                        <!-- <img src="" alt=""> -->
-                        <h3>NOME</h3>
-                        <h4>SERIE</h4>
-                        <h4>VIVO</h4>
-                    </div>
+                    <CardCharacter />
+
 
                 </div>
             </div>
@@ -72,15 +69,6 @@ section {
                 flex-wrap: wrap;
                 margin: 20px -20px;
                 text-align: center;
-
-                .card {
-                    width: calc(100% / 5 - 40px);
-                    background-color: $bg-dark-blue;
-                    margin: 0 20px;
-                    // debug
-                    height: 250px;
-                    border: 1px solid white;
-                }
             }
         }
     }

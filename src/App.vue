@@ -1,5 +1,4 @@
 <script>
-
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import CharacterList from './components/CharacterList.vue'
@@ -19,7 +18,10 @@ export default {
 
 <template>
   <AppHeader />
-  <CharacterList />
+  <main>
+    <CharacterList />
+  </main>
+
 </template>
 
 <style lang="scss">
