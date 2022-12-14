@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios';
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import CharacterList from './components/CharacterList.vue'
@@ -11,6 +12,18 @@ export default {
   data() {
     return {
       store
+    }
+  },
+  methods: {
+    getCharacters() {
+      axios
+        .get(store.apiUrl)
+        .then(res => {
+          store.CharacterList = res.data.results;
+        })
+        .catch(err => {
+          console.log("Errori", err)
+        });
     }
   }
 }
