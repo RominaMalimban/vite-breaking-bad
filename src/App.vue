@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
-import CharacterList from './components/CharacterList.vue'
+import CharacterList from './components/CharacterList.vue';
 
 export default {
   components: {
@@ -19,12 +19,15 @@ export default {
       axios
         .get(store.apiUrl)
         .then(res => {
-          store.CharacterList = res.data.results;
+          store.characterList = res.data.results;
         })
         .catch(err => {
           console.log("Errori", err)
         });
-    }
+    },
+  },
+  mounted() {
+    this.getCharacters();
   }
 }
 </script>

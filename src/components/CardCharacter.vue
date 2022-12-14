@@ -3,7 +3,7 @@
 export default {
     name: "CardCharacter",
     props: {
-
+        info: Object
     }
 };
 </script>
@@ -12,10 +12,10 @@ export default {
 
     <!-- card -->
     <div class="card">
-        <!-- <img src="" alt=""> -->
-        <h3>NOME</h3>
-        <h4>SERIE</h4>
-        <h4>VIVO</h4>
+        <img :src="info.image" alt="">
+        <h3>{{ info.name }}</h3>
+        <h4>{{ info.status }}</h4>
+        <h4>{{ info.species }}</h4>
     </div>
 
 </template>
@@ -26,9 +26,17 @@ export default {
 .card {
     width: calc(100% / 5 - 40px);
     background-color: $bg-dark-blue;
-    margin: 0 20px;
-    // debug
-    height: 250px;
-    border: 1px solid white;
+    margin: 10px 20px;
+    padding: 10px 10px 40px;
+
+    h3 {
+        color: $white;
+        margin: 15px 0;
+    }
+
+    h4 {
+        color: $gray-txt;
+    }
+
 }
 </style>

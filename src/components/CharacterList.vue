@@ -4,6 +4,9 @@ import CardCharacter from './CardCharacter.vue';
 
 export default {
     name: "CharacterList",
+    components: {
+        CardCharacter
+    },
     data() {
         return {
             store
@@ -31,8 +34,7 @@ export default {
                 <div class="cards">
 
                     <!-- card -->
-                    <CardCharacter />
-
+                    <CardCharacter v-for="character in store.characterList" :key="character.id" :info="character" />
 
                 </div>
             </div>
@@ -49,7 +51,7 @@ section {
     .container {
 
         select {
-            padding: 5px;
+            padding: 8px 5px;
         }
 
         .wrapper {
