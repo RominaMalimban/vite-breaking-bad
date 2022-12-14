@@ -19,7 +19,7 @@ export default {
 header {
 
     h1 {
-        color: $white-txt;
+        color: $white;
     }
 }
 </style>
