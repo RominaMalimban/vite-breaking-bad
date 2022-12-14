@@ -1,21 +1,31 @@
 <script>
-import { createApp } from 'vue';
-import HelloWorld from './components/HelloWorld.vue'
+
+import { store } from './store.js';
+import AppHeader from './components/AppHeader.vue'
 
 export default {
-  name: createApp,
   components: {
-
+    AppHeader
+  },
+  data() {
+    return {
+      store
+    }
   }
 }
 </script>
 
 <template>
 
-  <HelloWorld msg="Vite + Vue" />
+  <AppHeader />
 </template>
 
 <style lang="scss">
-@use './styles/generals.scss';
-@use './styles/partials/variables';
+@use './styles/generals.scss' as*;
+@use './styles/partials/variables' as*;
+
+body {
+  background-color: $bg-dark-blue;
+
+}
 </style>
