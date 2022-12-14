@@ -29,7 +29,7 @@ export default {
             <div class="wrapper">
                 <!-- div risultati -->
                 <div class="result">
-                    Find 62 characters
+                    Find {{ store.characterList.length }} characters
                 </div>
 
                 <!-- contenitore padre che contiene singola card -->
