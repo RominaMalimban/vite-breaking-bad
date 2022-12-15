@@ -20,7 +20,7 @@ export default {
       let myUrl = store.apiUrl;
 
       // creo condizioni:
-      if (store.apiStatusParameter === "alive" || store.apiStatusParameter === "dead" || store.apiStatusParameter === "unknown") {
+      if (store.searchStatus === "alive" || store.searchStatus === "dead" || store.searchStatus === "unknown") {
         myUrl += `?${store.apiStatusParameter}=${searchStatus}`
       }
 
