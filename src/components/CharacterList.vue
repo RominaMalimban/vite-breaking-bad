@@ -22,8 +22,9 @@ export default {
             <!-- tasto select -->
             <select name="category" id="category">
                 <option value="choice">Select Category</option>
-                <option value="cat1">Category 1</option>
-                <option value="cat1">Category 2</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+                <option value="unknown">Unknown</option>
             </select>
 
             <div class="wrapper">
