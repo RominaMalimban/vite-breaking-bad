@@ -20,7 +20,7 @@ export default {
         <div class="container">
 
             <!-- tasto select -->
-            <select name="category" id="category">
+            <select name="category" id="category" v-model="store.searchStatus" @click="$emit('performSearch')">
                 <option value="choice">Select Category</option>
                 <option value="alive">Alive</option>
                 <option value="dead">Dead</option>

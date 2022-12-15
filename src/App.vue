@@ -16,8 +16,16 @@ export default {
   },
   methods: {
     getCharacters() {
+
+      let myUrl = store.apiUrl;
+
+      // creo condizioni:
+      if (store.apiStatusParameter === "alive" || store.apiStatusParameter === "dead" || store.apiStatusParameter === "unknown") {
+        myUrl += `?${store.apiStatusParameter}=${searchStatus}`
+      }
+
       axios
-        .get(store.apiUrl)
+        .get(myUrl)
         .then(res => {
           store.characterList = res.data.results;
         })
@@ -35,7 +43,7 @@ export default {
 <template>
   <AppHeader />
   <main>
-    <CharacterList />
+    <CharacterList @performSearch="getCharacters" />
   </main>
 
 </template>
