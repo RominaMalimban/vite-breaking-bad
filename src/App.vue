@@ -3,15 +3,18 @@ import axios from 'axios';
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import CharacterList from './components/CharacterList.vue';
+import Loader from './components/Loader.vue';
 
 export default {
   components: {
     AppHeader,
-    CharacterList
+    CharacterList,
+    Loader
   },
   data() {
     return {
-      store
+      store,
+      loading: true,
     }
   },
   methods: {
@@ -29,6 +32,8 @@ export default {
         .get(myUrl)
         .then(res => {
           store.characterList = res.data.results;
+          // imposto la variabile loading su false una volta che i dati sono stati caricati:
+          this.loading = false;
         })
         .catch(err => {
           console.log("Errori", err)
@@ -42,6 +47,7 @@ export default {
 </script>
 
 <template>
+  <Loader v-if="loading" />
   <AppHeader />
   <main>
     <CharacterList @performSearch="getCharacters" />
