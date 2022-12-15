@@ -21,7 +21,8 @@ export default {
 
             <!-- tasto select -->
             <select name="category" id="category" v-model="store.searchStatus" @click="$emit('performSearch')">
-                <option value="choice">Select Category</option>
+                <option value="empty" disabled selected hidden>---</option>
+                <option value="choice">Select Status</option>
                 <option value="alive">Alive</option>
                 <option value="dead">Dead</option>
                 <option value="unknown">Unknown</option>

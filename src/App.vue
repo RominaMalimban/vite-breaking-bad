@@ -17,11 +17,12 @@ export default {
   methods: {
     getCharacters() {
 
+      // salvo in una variabile l'endpoint dell'api
       let myUrl = store.apiUrl;
 
       // creo condizioni:
       if (store.searchStatus === "alive" || store.searchStatus === "dead" || store.searchStatus === "unknown") {
-        myUrl += `?${store.apiStatusParameter}=${searchStatus}`
+        myUrl += `?${store.apiStatusParameter}=${store.searchStatus}`
       }
 
       axios
